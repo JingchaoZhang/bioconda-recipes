@@ -1,0 +1,17 @@
+about:
+  home: http://meme-suite.org/index.html
+  license: GNU
+  summary: Multiple Em for Motif Elicitation
+package:
+  name: meme
+  version: '4.8.1'
+source:
+  fn: meme_4.8.1.tar.gz
+  md5: e2e40fc86eb67b1346ac7c35240efd8f
+  url: http://meme-suite.org/meme-software/4.8.1/meme_4.8.1.tar.gz
+build:
+  number: 0
+test:
+  commands:
+    # just check for existence, because the individual programs have no unified behavior
+    - which meme
