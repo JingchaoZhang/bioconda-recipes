@@ -1,0 +1,32 @@
+about:
+    home: 'http://home.gwu.edu/~wpeng/Software.htm'
+    license: "GPLv2"
+    summary: "A clustering approach for identification of enriched domains from histone modification ChIP-Seq data"
+package: 
+  name: sicer
+  version: '1.1'
+source:
+  fn: SICER_V1.1.tgz
+  md5: 1c146ffc9cdd90716a5d025171cba33b
+  url: http://home.gwu.edu/~wpeng/SICER_V1.1.tgz
+requirements:
+  build:
+    - python >=2.7,<3
+    - numpy
+    - scipy
+  run:
+    - python >=2.7,<3
+    - numpy
+    - scipy
+build:
+  number: 0
+test:
+  requires:
+    - python >=2.7,<3
+    - numpy
+    - scipy
+  commands:
+    - cd ../work/SICER_V1.1
+    - grep -rl /home/data/SICER1.1 ./ | xargs sed -i "s@/home/data/SICER1.1@`pwd`@g"
+    - bash ./SICER/ex/run_SICER.sh
+
