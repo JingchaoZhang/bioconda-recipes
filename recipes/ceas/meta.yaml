@@ -1,0 +1,21 @@
+about:
+    home: 'http://liulab.dfci.harvard.edu/CEAS/'
+    license: "Artistic"
+    summary: "CEAS: Cis-regulatory Element Annotation System"
+package: 
+  name: ceas
+  version: '1.0.2'
+source:
+  fn: CEAS-Package-1.0.2.tar.gz
+  md5: faf202ff613794ab9cd07f282c6e2663
+  url: http://liulab.dfci.harvard.edu/CEAS/src/CEAS-Package-1.0.2.tar.gz
+requirements:
+  build:
+    - python
+    - setuptools
+build:
+  number: 0
+test:
+  # Python imports
+    imports:
+        - CEAS
